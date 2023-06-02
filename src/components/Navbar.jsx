@@ -53,7 +53,7 @@ const MobileNav = (props) => {
   const mobileNavContainer = (
     <div
       className={`mobile-nav__container slide-in-right ${
-        props.menuState ? "reverse" : ""
+        !props.menuState ? "reverse" : ""
       }`}
     >
       <div className="mobile-nav__icon-container">
@@ -89,7 +89,15 @@ function Navbar() {
   useEffect(() => {
     let identifier;
 
-    if (toggleMenu) {
+    // if (!hasMenuBeenOpen) {
+    //   timer = setTimeout(() => {
+    //     setIsMenuShown(false);
+    //   }, 300);
+    // } else {
+    //   setIsMenuShown(true);
+    // }
+
+    if (!toggleMenu) {
       identifier = setTimeout(() => {
         setIsMenuVisible(false);
       }, 400);
