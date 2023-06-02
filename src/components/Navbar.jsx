@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
@@ -52,9 +52,7 @@ const MobileNav = (props) => {
 
   const mobileNavContainer = (
     <div
-      className={`mobile-nav__container slide-in-right ${
-        !props.menuState ? "reverse" : ""
-      }`}
+      className={`mobile-nav__container slide-in-right ${props.toggleMenuAnimation}`}
     >
       <div className="mobile-nav__icon-container">
         <TfiClose
@@ -84,34 +82,19 @@ const MobileNav = (props) => {
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-
-  useEffect(() => {
-    let identifier;
-
-    // if (!hasMenuBeenOpen) {
-    //   timer = setTimeout(() => {
-    //     setIsMenuShown(false);
-    //   }, 300);
-    // } else {
-    //   setIsMenuShown(true);
-    // }
-
-    if (!toggleMenu) {
-      identifier = setTimeout(() => {
-        setIsMenuVisible(false);
-      }, 400);
-    } else {
-      setIsMenuVisible(true);
-    }
-
-    return () => {
-      identifier && clearTimeout(identifier);
-    };
-  }, [toggleMenu]);
+  const [toggleMenuAnimation, setToggleMenuAnimation] = useState("");
 
   const toggleMenuHandler = () => {
     setToggleMenu(!toggleMenu);
+    setToggleMenuAnimation("");
+  };
+
+  const hide = async (ms) => {
+    setToggleMenuAnimation("reverse");
+
+    await new Promise((r) => setTimeout(r, ms));
+
+    setToggleMenu(false);
   };
 
   return (
@@ -132,8 +115,13 @@ function Navbar() {
             className="mobile-nav__open-icon"
             onClick={toggleMenuHandler}
           />
-          {isMenuVisible && (
-            <MobileNav onCloseMenu={toggleMenuHandler} menuState={toggleMenu} />
+          {toggleMenu && (
+            <MobileNav
+              onCloseMenu={() => {
+                hide(400);
+              }}
+              toggleMenuAnimation={toggleMenuAnimation}
+            />
           )}
         </div>
       </Container>
