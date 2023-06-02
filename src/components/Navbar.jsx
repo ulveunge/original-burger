@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,8 @@ import Container from "./Container";
 
 import "./Navbar.scss";
 import Logo from "./Logo";
-import { AiFillPhone, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { AiFillPhone, AiOutlineMenu } from "react-icons/ai";
+import { TfiClose } from "react-icons/tfi";
 
 const Links = (props) => {
   return (
@@ -50,9 +51,13 @@ const MobileNav = (props) => {
   const backdrop = <div className="backdrop" onClick={props.onCloseMenu}></div>;
 
   const mobileNavContainer = (
-    <div className="mobile-nav__container">
+    <div
+      className={`mobile-nav__container slide-in-right ${
+        props.menuState ? "reverse" : ""
+      }`}
+    >
       <div className="mobile-nav__icon-container">
-        <AiOutlineClose
+        <TfiClose
           size="40"
           color="#777777"
           onClick={props.onCloseMenu}
@@ -79,6 +84,23 @@ const MobileNav = (props) => {
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  useEffect(() => {
+    let identifier;
+
+    if (toggleMenu) {
+      identifier = setTimeout(() => {
+        setIsMenuVisible(false);
+      }, 400);
+    } else {
+      setIsMenuVisible(true);
+    }
+
+    return () => {
+      identifier && clearTimeout(identifier);
+    };
+  }, [toggleMenu]);
 
   const toggleMenuHandler = () => {
     setToggleMenu(!toggleMenu);
@@ -102,7 +124,9 @@ function Navbar() {
             className="mobile-nav__open-icon"
             onClick={toggleMenuHandler}
           />
-          {toggleMenu && <MobileNav onCloseMenu={toggleMenuHandler} />}
+          {isMenuVisible && (
+            <MobileNav onCloseMenu={toggleMenuHandler} menuState={toggleMenu} />
+          )}
         </div>
       </Container>
     </nav>
