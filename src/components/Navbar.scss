@@ -1,0 +1,149 @@
+@import "../scss/mixins";
+@import "../scss/variables";
+
+.nav {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+
+  &__mobile {
+    display: none;
+
+    @include mq("tablet-wide") {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  & .container {
+    max-width: 90.5rem;
+
+    @include mq("tablet-wide") {
+      background-color: rgba(0, 0, 0, 0.85);
+
+      min-width: 100%;
+      padding: 0 1.5rem;
+    }
+  }
+}
+
+.links-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 11rem;
+
+  @include mq("tablet-wide") {
+    display: none;
+  }
+
+  &--mobile {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid #eef1f6;
+  }
+
+  &__link {
+    a {
+      @include font-config($size: 12px, $colour: $clr-f-nav-link, $weight: 800);
+      letter-spacing: 1px;
+    }
+
+    a:hover {
+      color: $clr-f-black;
+    }
+
+    text-transform: uppercase;
+
+    &--phone-number {
+      background-color: $clr-primary-orange;
+      border-radius: 0.3rem;
+
+      &:hover {
+        background-color: $clr-primary-orange-dk;
+      }
+
+      a {
+        display: flex;
+        column-gap: 0.5rem;
+
+        color: $clr-f-white;
+        padding: 1.2rem 1.5rem;
+      }
+
+      a:hover {
+        color: $clr-f-white;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  height: 7rem;
+
+  &__open-icon:hover {
+    fill: #ffffff;
+  }
+
+  &__icon-container {
+    width: 50%;
+    margin: 0 auto;
+
+    margin: 30px auto 60px auto;
+  }
+
+  &__container {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+
+    width: 50%;
+    height: 100vh;
+
+    background-color: #ffffff;
+
+    @include mq("tablet-wide") {
+      display: block;
+    }
+
+    .links-list__link {
+      padding: 2rem 0;
+      border-bottom: 1px solid #eef1f6;
+
+      a:hover {
+        color: $clr-primary-orange;
+      }
+    }
+
+    .links-list__link--phone-number {
+      align-self: flex-start;
+      margin: 2rem 0;
+
+      padding: 0;
+
+      a {
+        padding: 0.8rem 0.9rem;
+      }
+    }
+  }
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  @include mq("tablet-wide") {
+    display: block;
+  }
+}

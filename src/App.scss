@@ -1,3 +1,12 @@
-.App {
-  color: blue;
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap";
+@import "./scss/reset", "./scss/variables", "./scss/mixins";
+
+.page {
+  font-family: "Manrope", Helvetica, Arial, sans-serif;
+  @include font-config(
+    $size: 1.6rem,
+    $colour: $clr-f-black,
+    $weight: normal,
+    $lh: 1.5
+  );
 }
