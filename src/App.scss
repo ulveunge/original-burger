@@ -1,5 +1,6 @@
-@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap";
-@import "./scss/reset", "./scss/variables", "./scss/mixins";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap",
+  "https://fonts.googleapis.com/css2?family=Special+Elite&display=swap";
+@import "./scss/reset", "./scss/variables", "./scss/mixins", "./scss/animations";
 
 .page {
   font-family: "Manrope", Helvetica, Arial, sans-serif;

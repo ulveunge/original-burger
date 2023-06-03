@@ -1,0 +1,170 @@
+@import "../scss/mixins", "../scss/variables";
+
+.home-header {
+  font-size: 1rem;
+
+  @include mq("desktop") {
+    font-size: 0.9rem;
+  }
+
+  @include mq("tablet-wide") {
+    font-size: 0.69rem;
+  }
+
+  @include mq("tablet") {
+    font-size: 0.5rem;
+  }
+
+  @include mq("phablet") {
+    font-size: 0.42rem;
+  }
+
+  @include mq("phone-wide") {
+    font-size: 0.42rem;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18em;
+  }
+
+  &__food-images {
+    height: 100%;
+
+    transform: translateY(-6em);
+    div {
+      position: absolute;
+    }
+  }
+
+  &__cola-glass {
+    width: 28em;
+    z-index: 20;
+    top: -1em;
+    left: 5em;
+
+    @include mq("phone-wide") {
+      width: 22em;
+      top: 12em;
+    }
+  }
+
+  &__cola-can {
+    width: 15.5em;
+    z-index: 10;
+    transform: translate(25em, 5em);
+
+    @include mq("phone-wide") {
+      width: 9.5em;
+      transform: translate(21em, 18em);
+    }
+  }
+
+  &__potatoes {
+    width: 37.4em;
+    z-index: 30;
+    transform: translate(27em, 19em);
+
+    @include mq("phone-wide") {
+      width: 31.4em;
+      transform: translate(27em, 30em);
+    }
+  }
+
+  &__burgers {
+    width: 49.2em;
+    z-index: 40;
+    transform: translate(-2em, 22em);
+
+    @include mq("phone-wide") {
+      width: 43.2em;
+      transform: translate(-2em, 30em);
+    }
+  }
+
+  &__line {
+    width: 23.9em;
+    z-index: 50;
+    left: 100em;
+    transform: translate(-53em, 33em);
+
+    @include mq("phone-wide") {
+      width: 18.9em;
+      transform: translate(-54em, 41em);
+    }
+  }
+
+  &__images-text {
+    font-family: "Special Elite", cursive;
+    @include font-config($size: 3.5em, $colour: $clr-primary-orange);
+
+    position: absolute;
+    z-index: 60;
+
+    top: 13.8em;
+    left: 16.7em;
+
+    @include mq("phone-wide") {
+      top: 15em;
+      left: 15.7em;
+    }
+  }
+
+  &__text-content {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 5em;
+
+    color: #222222;
+
+    h1 {
+      @include font-config(
+        $size: 5.3em,
+        $colour: #222222,
+        $weight: 700,
+        $lh: 1.2
+      );
+    }
+
+    span {
+      @include font-config();
+    }
+  }
+
+  .hot-price {
+    margin-top: 1.5em;
+
+    align-self: flex-end;
+    display: flex;
+    width: 25.3em;
+    height: 6.8em;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include font-config($weight: 800, $lh: 1);
+    span {
+      flex: 1;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 2.5em;
+    }
+
+    &__price {
+      font-size: 3.2em;
+      color: $clr-primary-orange;
+    }
+  }
+}

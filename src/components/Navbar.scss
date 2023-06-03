@@ -1,4 +1,4 @@
-@import "../scss/mixins", "../scss/variables", "../scss/animations";
+@import "../scss/mixins", "../scss/variables";
 
 .nav {
   width: 100%;
@@ -81,7 +81,7 @@
 }
 
 .mobile-nav {
-  height: 7rem;
+  height: 70px;
 
   &__open-icon {
     cursor: pointer;
