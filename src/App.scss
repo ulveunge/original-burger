@@ -11,3 +11,8 @@
     $lh: 1.5
   );
 }
+
+::selection {
+  background-color: $clr-primary-orange;
+  color: $clr-f-white;
+}
