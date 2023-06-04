@@ -1,16 +1,16 @@
 import React from "react";
 
-import Container from "./Layout/Container";
+import Container from "../Layout/Container";
 
-import mainBg from "../assets/white-concrete-wall_53876-92803.webp";
-import textBg from "../assets/original78.png";
-import hotPriceBg from "../assets/33.png";
+import mainBg from "../../assets/white-concrete-wall_53876-92803.webp";
+import textBg from "../../assets/original78.png";
+import hotPriceBg from "../../assets/33.png";
 
-import colaGlass from "../assets/4-2-coca-cola-picture.png";
-import colaCan from "../assets/coca-cola.png";
-import potatoes from "../assets/imgbin_potato-wedges-home-fries-french-fries-patatas-bravas-lyonnaise-potatoes-png-1.png";
-import burgers from "../assets/origi.png";
-import line from "../assets/22.png";
+import colaGlass from "../../assets/4-2-coca-cola-picture.png";
+import colaCan from "../../assets/coca-cola.png";
+import potatoes from "../../assets/imgbin_potato-wedges-home-fries-french-fries-patatas-bravas-lyonnaise-potatoes-png-1.png";
+import burgers from "../../assets/origi.png";
+import line from "../../assets/22.png";
 
 import "./HomeHeaderContent.scss";
 
@@ -62,12 +62,12 @@ function HomeHeaderContent() {
             </span>
           </div>
           <div className="home-header__text-content">
-            <h1>
+            <h2>
               2 Original Burger XL
               <br />
               Country πατάτες
               <br />2 coca cola 330ml
-            </h1>
+            </h2>
             <div className="hot-price" style={hotPriceBackgroundStyles}>
               <span className="hot-price__text">
                 Hot <br /> Price
