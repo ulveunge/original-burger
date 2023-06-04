@@ -8,7 +8,7 @@ import {
   Franchise,
   ContactUs,
 } from "./pages/pages";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Layout/Navbar";
 
 import "./App.scss";
 

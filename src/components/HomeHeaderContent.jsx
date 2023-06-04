@@ -1,6 +1,6 @@
 import React from "react";
 
-import Container from "./Container";
+import Container from "./Layout/Container";
 
 import mainBg from "../assets/white-concrete-wall_53876-92803.webp";
 import textBg from "../assets/original78.png";

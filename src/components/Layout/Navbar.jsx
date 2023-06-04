@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Container from "./Container";
 
 import "./Navbar.scss";
-import Logo from "./Logo";
+import Logo from "../UI/Logo";
 import { AiFillPhone, AiOutlineMenu } from "react-icons/ai";
 import { TfiClose } from "react-icons/tfi";
 
