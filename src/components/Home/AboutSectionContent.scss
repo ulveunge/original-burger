@@ -1,0 +1,75 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.about-section {
+  &__wrapper {
+    @include font-config(
+      $size: 1rem,
+      $colour: $clr-f-white,
+      $weight: 400,
+      $lh: 1.5
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("tablet") {
+      flex-direction: column;
+    }
+
+    div {
+      flex: 1;
+    }
+  }
+
+  &__image {
+    text-align: center;
+    vertical-align: middle;
+
+    img {
+      width: 90%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+
+  &__title {
+    @include font-config($size: 3em, $weight: 700, $lh: 1.2);
+
+    @include mq("desktop") {
+      font-size: 2.7em;
+    }
+
+    @include mq("tablet-wide") {
+      font-size: 2.4em;
+    }
+
+    span {
+      color: $clr-primary-orange;
+    }
+
+    span:first-child {
+      font-family: "Special Elite", cursive;
+      @include font-config($size: 1.8rem, $weight: 400);
+    }
+  }
+
+  &__text {
+    font-size: 1.6em;
+  }
+
+  &__btn {
+    align-self: flex-start;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+
+    @include font-config($size: 1.4em, $colour: $clr-f-white, $weight: 800);
+  }
+}

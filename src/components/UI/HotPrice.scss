@@ -1,0 +1,24 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.hot-price {
+  display: flex;
+  width: 25.3em;
+  height: 6.8em;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include font-config($weight: 800, $lh: 1);
+  span {
+    flex: 1;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 2.5em;
+  }
+
+  &__price {
+    font-size: 3.2em;
+    color: $clr-primary-orange;
+  }
+}

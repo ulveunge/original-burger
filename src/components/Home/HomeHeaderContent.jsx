@@ -1,10 +1,10 @@
 import React from "react";
 
 import Container from "../Layout/Container";
+import HotPrice from "../UI/HotPrice";
 
 import mainBg from "../../assets/white-concrete-wall_53876-92803.webp";
 import textBg from "../../assets/original78.png";
-import hotPriceBg from "../../assets/33.png";
 
 import colaGlass from "../../assets/4-2-coca-cola-picture.png";
 import colaCan from "../../assets/coca-cola.png";
@@ -14,26 +14,29 @@ import line from "../../assets/22.png";
 
 import "./HomeHeaderContent.scss";
 
-function HomeHeaderContent() {
-  const topBackgroundStyles = {
+const TopBg = () => {
+  const styles = {
     height: "50.14em",
     background: `url('${textBg}') no-repeat center top 14.7rem, url('${mainBg}') center no-repeat`,
     backgroundSize: "contain, cover",
   };
 
-  const bottomBackgroundStyles = {
+  return <div style={styles}></div>;
+};
+
+const BottomBg = () => {
+  const styles = {
     height: "28.6em",
     backgroundColor: `#222222`,
   };
 
-  const hotPriceBackgroundStyles = {
-    background: `url('${hotPriceBg}') no-repeat`,
-    backgroundSize: "100% 100%",
-  };
+  return <div style={styles}></div>;
+};
 
+function HomeHeaderContent() {
   return (
     <React.Fragment>
-      <div style={topBackgroundStyles}></div>
+      <TopBg />
       <Container>
         <div className="home-header__content-wrapper">
           <div className="home-header__food-images">
@@ -68,16 +71,11 @@ function HomeHeaderContent() {
               Country πατάτες
               <br />2 coca cola 330ml
             </h2>
-            <div className="hot-price" style={hotPriceBackgroundStyles}>
-              <span className="hot-price__text">
-                Hot <br /> Price
-              </span>
-              <span className="hot-price__price">€13.00</span>
-            </div>
+            <HotPrice className="home-header__hot-price" />
           </div>
         </div>
       </Container>
-      <div style={bottomBackgroundStyles}></div>
+      <BottomBg />
     </React.Fragment>
   );
 }

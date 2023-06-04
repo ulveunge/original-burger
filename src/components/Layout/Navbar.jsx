@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import useMediaQuery from "../../hooks/useMediaQuery";
+
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
@@ -8,8 +10,11 @@ import "./Navbar.scss";
 import Logo from "../UI/Logo";
 import { AiFillPhone, AiOutlineMenu } from "react-icons/ai";
 import { TfiClose } from "react-icons/tfi";
+import HeaderIntersectionContext from "../../store/header-intersection-context";
 
 const Links = (props) => {
+  const headerIntersectionCtx = useContext(HeaderIntersectionContext);
+
   return (
     <React.Fragment>
       <li className="links-list__link">
@@ -27,7 +32,11 @@ const Links = (props) => {
       {props.showLogo && (
         <li className="links-list__link nav__logo">
           <Link to="/">
-            <Logo width="148" height="80" />
+            <Logo
+              color={!headerIntersectionCtx.isIntersecting && "white"}
+              width="148"
+              height="80"
+            />
           </Link>
         </li>
       )}
@@ -83,6 +92,8 @@ const MobileNav = (props) => {
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenuAnimation, setToggleMenuAnimation] = useState("");
+  const headerIntersectionCtx = useContext(HeaderIntersectionContext);
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
 
   const toggleMenuHandler = () => {
     setToggleMenu(!toggleMenu);
@@ -98,7 +109,11 @@ function Navbar() {
   };
 
   return (
-    <nav className="nav">
+    <nav
+      className={`nav ${
+        !headerIntersectionCtx.isIntersecting && isDesktop && "sticky"
+      }`}
+    >
       <Container>
         <ul className="nav__list links-list">
           <Links showLogo={true} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+
 import {
   Home,
   Philosophy,
@@ -8,13 +9,16 @@ import {
   Franchise,
   ContactUs,
 } from "./pages/pages";
+
+import HeaderIntersectionProvider from "./store/HeaderIntersectionProvider";
+
 import Navbar from "./components/Layout/Navbar";
 
 import "./App.scss";
 
 function App() {
   return (
-    <React.Fragment>
+    <HeaderIntersectionProvider>
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
@@ -24,7 +28,7 @@ function App() {
         <Route path="franchise" element={<Franchise />} />
         <Route path="contact-us" element={<ContactUs />} />
       </Routes>
-    </React.Fragment>
+    </HeaderIntersectionProvider>
   );
 }
 
