@@ -97,6 +97,10 @@
 .mobile-nav {
   height: 70px;
 
+  &__logo {
+    align-self: center;
+  }
+
   &__open-icon {
     cursor: pointer;
 
@@ -134,12 +138,6 @@
 
     @include mq("tablet") {
       width: 100%;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .links-list__link {

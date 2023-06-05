@@ -1,0 +1,16 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.menu-container {
+  font-size: 1rem;
+  position: relative;
+  padding: 0 20px;
+
+  @include mq("tablet") {
+    padding-bottom: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+}

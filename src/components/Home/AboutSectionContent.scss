@@ -2,12 +2,7 @@
 
 .about-section {
   &__wrapper {
-    @include font-config(
-      $size: 1rem,
-      $colour: $clr-f-white,
-      $weight: 400,
-      $lh: 1.5
-    );
+    @include font-config($size: 1rem, $weight: 400, $lh: 1.5);
 
     display: flex;
     justify-content: center;
@@ -55,6 +50,8 @@
     span:first-child {
       font-family: "Special Elite", cursive;
       @include font-config($size: 1.8rem, $weight: 400);
+      display: inline-block;
+      margin-bottom: 0.8rem;
     }
   }
 
@@ -70,6 +67,6 @@
     align-items: center;
     column-gap: 1em;
 
-    @include font-config($size: 1.4em, $colour: $clr-f-white, $weight: 800);
+    @include font-config($size: 1.4em, $weight: 800);
   }
 }

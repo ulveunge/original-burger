@@ -1,0 +1,19 @@
+@import "../../scss/variables";
+
+.section.light {
+  color: $clr-f-grey;
+  background-color: #ededed;
+}
+
+.section.dark {
+  color: $clr-f-white;
+  background-color: #181818;
+
+  a {
+    color: $clr-f-white;
+  }
+
+  a:hover {
+    color: $clr-f-white;
+  }
+}

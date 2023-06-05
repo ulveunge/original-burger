@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Section.scss";
+
 function Section(props) {
   const styles = {
     ...(props.bg && {
@@ -12,7 +14,9 @@ function Section(props) {
   return (
     <section
       style={styles}
-      className={`section ${props.className} section-padding`}
+      className={`section ${props.className} section-padding ${
+        props.mode ? props.mode : ""
+      }`}
     >
       {props.children}
     </section>
