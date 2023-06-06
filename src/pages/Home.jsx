@@ -1,15 +1,14 @@
-import React from "react";
+import AboutSectionContent from "../components/Home/AboutSectionContent";
 import Header from "../components/Layout/Header";
 import HomeHeaderContent from "../components/Home/HomeHeaderContent";
-import Section from "../components/Layout/Section";
-import AboutSectionContent from "../components/Home/AboutSectionContent";
 import MenuContainer from "../components/Menu/MenuContainer";
 import MenuList from "../components/Menu/MenuList";
-
+import React from "react";
+import Section from "../components/Layout/Section";
+import { YOUR_TOP_CHOICE } from "../config";
 import aboutBg from "../assets/h3-rev-bckgrnd-ing.jpg";
-
-import whiteMenuBg from "../assets/bg10.jpg";
 import menuListTitleImg from "../assets/yourtopchoice.png";
+import whiteMenuBg from "../assets/bg10.jpg";
 
 function Home() {
   return (
@@ -33,7 +32,7 @@ function Home() {
           alt="Your Top Choice"
           titleText="δημοφιλέστερα burgers"
         >
-          <MenuList />
+          <MenuList items={YOUR_TOP_CHOICE}/>
         </MenuContainer>
       </Section>
     </React.Fragment>

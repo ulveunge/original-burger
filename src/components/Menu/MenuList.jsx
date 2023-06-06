@@ -1,11 +1,14 @@
-import React from "react";
-
 import "./MenuList.scss";
 
-function MenuList() {
+import MenuItem from "./MenuItem";
+import React from "react";
+
+function MenuList(props) {
   return (
-    <ul className="menu-wrapper__list">
-      <li> Menu List </li>
+    <ul className="menu-list section-padding">
+      {props.items.map((item) => (
+        <MenuItem key={item.id} item={item} />
+      ))}
     </ul>
   );
 }

@@ -1,18 +1,15 @@
-import React from "react";
+import "./HomeHeaderContent.scss";
 
 import Container from "../Layout/Container";
 import HotPrice from "../UI/HotPrice";
-
-import mainBg from "../../assets/white-concrete-wall_53876-92803.webp";
-import textBg from "../../assets/original78.png";
-
-import colaGlass from "../../assets/4-2-coca-cola-picture.png";
-import colaCan from "../../assets/coca-cola.png";
-import potatoes from "../../assets/imgbin_potato-wedges-home-fries-french-fries-patatas-bravas-lyonnaise-potatoes-png-1.png";
+import React from "react";
 import burgers from "../../assets/origi.png";
+import colaCan from "../../assets/coca-cola.png";
+import colaGlass from "../../assets/4-2-coca-cola-picture.png";
 import line from "../../assets/22.png";
-
-import "./HomeHeaderContent.scss";
+import mainBg from "../../assets/white-concrete-wall_53876-92803.webp";
+import potatoes from "../../assets/imgbin_potato-wedges-home-fries-french-fries-patatas-bravas-lyonnaise-potatoes-png-1.png";
+import textBg from "../../assets/original78.png";
 
 const TopBg = () => {
   const styles = {
