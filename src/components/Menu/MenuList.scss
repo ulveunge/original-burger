@@ -6,7 +6,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 1.8rem;
+  row-gap: 3rem;
+  @include mq("tablet") {
+    row-gap: 1.5rem;
+  }
 
-  padding: 0px -0.9rem;
+  margin: 0px -1.5rem;
 }

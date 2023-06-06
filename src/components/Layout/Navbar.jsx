@@ -1,16 +1,15 @@
-import React, { useState, useContext } from "react";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import "./Navbar.scss";
 
-import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
+import { AiFillPhone, AiOutlineMenu } from "react-icons/ai";
+import React, { useContext, useState } from "react";
 
 import Container from "./Container";
-
-import "./Navbar.scss";
-import Logo from "../UI/Logo";
-import { AiFillPhone, AiOutlineMenu } from "react-icons/ai";
-import { TfiClose } from "react-icons/tfi";
 import HeaderIntersectionContext from "../../store/header-intersection-context";
+import { Link } from "react-router-dom";
+import Logo from "../UI/Logo";
+import ReactDOM from "react-dom";
+import { TfiClose } from "react-icons/tfi";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Links = (props) => {
   const headerIntersectionCtx = useContext(HeaderIntersectionContext);
@@ -114,7 +113,7 @@ function Navbar() {
         !headerIntersectionCtx.isIntersecting && isDesktop && "sticky"
       }`}
     >
-      <Container>
+      <Container className="nav__container">
         <ul className="nav__list links-list">
           <Links showLogo={true} />
         </ul>

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+
 import HeaderIntersectionContext from "../../store/header-intersection-context";
+import { useInView } from "react-intersection-observer";
 
 function Header(props) {
   const headerIntersectionCtx = useContext(HeaderIntersectionContext);
@@ -14,7 +15,10 @@ function Header(props) {
   }, [inView, headerIntersectionCtx]);
 
   return (
-    <header ref={ref} className={`header ${props.className}`}>
+    <header
+      ref={ref}
+      className={`header ${props.className ? props.className : ""}`}
+    >
       {props.children}
     </header>
   );

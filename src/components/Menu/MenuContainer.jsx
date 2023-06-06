@@ -1,12 +1,13 @@
-import React from "react";
+import "./MenuContainer.scss";
+
+import Container from "../Layout/Container";
 // import Container from "../Layout/Container";
 import MenuTitle from "./MenuTitle";
-
-import "./MenuContainer.scss";
+import React from "react";
 
 function MenuContainer(props) {
   return (
-    <div className="menu-container">
+    <Container className="menu-container">
       <div className="menu-container__body">
         <MenuTitle
           titleImg={props.titleImg}
@@ -17,7 +18,7 @@ function MenuContainer(props) {
         />
         {props.children}
       </div>
-    </div>
+    </Container>
   );
 }
 
