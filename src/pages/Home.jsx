@@ -1,5 +1,6 @@
 import AboutSectionContent from "../components/Home/AboutSectionContent";
 import Contacts from "../components/Footer/Contacts";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Layout/Header";
 import HomeHeaderContent from "../components/Home/HomeHeaderContent";
 import Info from "../components/Home/Info";
@@ -49,6 +50,7 @@ function Home() {
       >
         <Contacts />
       </Section>
+      <Footer />
     </React.Fragment>
   );
 }

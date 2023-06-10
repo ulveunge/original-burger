@@ -60,7 +60,7 @@ function Info() {
         >
           <div className="info-section__content">
             <h3 className="info-section__title">
-              <span>Franchise</span>
+              <Title>Franchise</Title>
               <br />
               Γίνε συνεργάτης μας
             </h3>
