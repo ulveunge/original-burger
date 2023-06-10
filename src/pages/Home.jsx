@@ -1,12 +1,15 @@
+import React, { useContext } from "react";
+
 import AboutSectionContent from "../components/Home/AboutSectionContent";
+import BackToTopButton from "../components/UI/BackToTopButton";
 import Contacts from "../components/Footer/Contacts";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Layout/Header";
+import HeaderIntersectionContext from "../store/header-intersection-context";
 import HomeHeaderContent from "../components/Home/HomeHeaderContent";
 import Info from "../components/Home/Info";
 import MenuContainer from "../components/Menu/MenuContainer";
 import MenuList from "../components/Menu/MenuList";
-import React from "react";
 import Section from "../components/Layout/Section";
 import { YOUR_TOP_CHOICE } from "../data";
 import aboutBg from "../assets/h3-rev-bckgrnd-ing.jpg";
@@ -15,6 +18,9 @@ import menuListTitleImg from "../assets/yourtopchoice.png";
 import whiteMenuBg from "../assets/bg10.jpg";
 
 function Home() {
+  const headerIntersectionCtx = useContext(HeaderIntersectionContext);
+  console.log(headerIntersectionCtx.isIntersecting);
+
   return (
     <React.Fragment>
       <Header className="home-header">
@@ -51,6 +57,7 @@ function Home() {
         <Contacts />
       </Section>
       <Footer />
+      {!headerIntersectionCtx.isIntersecting && <BackToTopButton />}
     </React.Fragment>
   );
 }

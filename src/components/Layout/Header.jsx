@@ -16,6 +16,7 @@ function Header(props) {
 
   return (
     <header
+      id="header"
       ref={ref}
       className={`header ${props.className ? props.className : ""}`}
     >

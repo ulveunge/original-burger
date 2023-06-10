@@ -1,20 +1,18 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import "./App.scss";
 
 import {
-  Home,
-  Philosophy,
-  Menu,
+  ContactUs,
   Diet,
   Franchise,
-  ContactUs,
+  Home,
+  Menu,
+  Philosophy,
 } from "./pages/pages";
+import { Route, Routes } from "react-router-dom";
 
 import HeaderIntersectionProvider from "./store/HeaderIntersectionProvider";
-
 import Navbar from "./components/Layout/Navbar";
-
-import "./App.scss";
+import React from "react";
 
 function App() {
   return (
