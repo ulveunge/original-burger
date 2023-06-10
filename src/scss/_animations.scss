@@ -80,3 +80,14 @@
     }
   }
 }
+
+@include keyframes(social-icon-scale) {
+  50% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

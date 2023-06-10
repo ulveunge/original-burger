@@ -1,4 +1,5 @@
 import AboutSectionContent from "../components/Home/AboutSectionContent";
+import Contacts from "../components/Footer/Contacts";
 import Header from "../components/Layout/Header";
 import HomeHeaderContent from "../components/Home/HomeHeaderContent";
 import Info from "../components/Home/Info";
@@ -8,6 +9,7 @@ import React from "react";
 import Section from "../components/Layout/Section";
 import { YOUR_TOP_CHOICE } from "../data";
 import aboutBg from "../assets/h3-rev-bckgrnd-ing.jpg";
+import contactsBg from "../assets/bg-white.jpg";
 import menuListTitleImg from "../assets/yourtopchoice.png";
 import whiteMenuBg from "../assets/bg10.jpg";
 
@@ -38,6 +40,14 @@ function Home() {
       </Section>
       <Section mode="dark" className="info-section">
         <Info />
+      </Section>
+      <Section
+        bg={contactsBg}
+        mode="light"
+        padding="6em"
+        className="contacts-section"
+      >
+        <Contacts />
       </Section>
     </React.Fragment>
   );
