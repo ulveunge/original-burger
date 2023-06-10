@@ -1,0 +1,111 @@
+@import "../../scss/mixins", "../../scss/variables";
+
+.info-section {
+  font-size: 1rem;
+
+  @include font-config($size: 1rem, $colour: $clr-f-white, $lh: 1.5);
+
+  &__container {
+    min-width: 100%;
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq("desktop") {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 50%;
+    height: 49.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("desktop") {
+      width: 100%;
+      height: 53.6rem;
+    }
+
+    @include mq("tablet-wide") {
+      height: 48.7rem;
+    }
+
+    @include mq("tablet") {
+      height: 43.5rem;
+    }
+
+    @include mq("phablet") {
+      height: 39.7rem;
+    }
+  }
+
+  &--nutrition-image {
+    @include mq("desktop") {
+      order: 0;
+    }
+  }
+
+  &--nutrition-content {
+    @include mq("desktop") {
+      order: 1;
+    }
+  }
+
+  &--franchise-image {
+    @include mq("desktop") {
+      order: 2;
+    }
+  }
+
+  &--franchise-content {
+    @include mq("desktop") {
+      order: 3;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+    width: 75%;
+  }
+
+  &__title {
+    @include font-config($size: 3rem, $weight: 700, $lh: 1.2);
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    padding: 1.7rem 3rem;
+    border: 0.1rem solid $clr-primary-orange;
+    transition: background-color 0.4s ease-in-out;
+
+    span {
+      @include font-config(
+        $size: 1.1rem,
+        $colour: $clr-primary-orange,
+        $weight: 600,
+        $lh: 1.4
+      );
+      text-transform: uppercase;
+      transition: color 0.4s ease-in-out;
+    }
+
+    &:hover {
+      background-color: $clr-primary-orange;
+
+      span {
+        color: $clr-f-white;
+      }
+    }
+  }
+}

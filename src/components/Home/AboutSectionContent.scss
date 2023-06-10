@@ -48,9 +48,6 @@
     }
 
     span:first-child {
-      font-family: "Special Elite", cursive;
-      @include font-config($size: 1.8rem, $weight: 400);
-      display: inline-block;
       margin-bottom: 0.8rem;
     }
   }

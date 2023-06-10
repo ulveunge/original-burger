@@ -1,11 +1,11 @@
-import React from "react";
-
-import Container from "../Layout/Container";
-
-import img from "../../assets/burger3.png";
 import "./AboutSectionContent.scss";
+
 import { BsArrowRightCircle } from "react-icons/bs";
+import Container from "../Layout/Container";
 import { Link } from "react-router-dom";
+import React from "react";
+import Title from "../UI/Title";
+import img from "../../assets/burger3.png";
 
 function AboutSectionContent() {
   return (
@@ -16,7 +16,7 @@ function AboutSectionContent() {
         </div>
         <div className="about-section__content">
           <h3 className="about-section__title">
-            <span>We love burgers</span>
+            <Title>We love burgers</Title>
             <br />
             <span>Πλούσιες</span> γευστικές προτάσεις με επίκεντρο τα{" "}
             <span>Burgers</span>.

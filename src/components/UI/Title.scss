@@ -1,0 +1,11 @@
+@import "../../scss/mixins", "../../scss/variables";
+
+.title {
+  font-family: "Special Elite", cursive;
+  @include font-config(
+    $size: 1.8rem,
+    $colour: $clr-primary-orange,
+    $weight: 400
+  );
+  display: inline-block;
+}
