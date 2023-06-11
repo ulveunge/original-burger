@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a09483a.css",
+    "main.js": "/static/js/main.62553ce9.js",
+    "static/media/origi.png": "/static/media/origi.d635ed01e20203791c18.png",
+    "static/media/4-2-coca-cola-picture.png": "/static/media/4-2-coca-cola-picture.a98032d6908775a83228.png",
+    "static/media/burger3.png": "/static/media/burger3.e58d9dc7dfffb93065a3.png",
+    "static/media/imgbin_potato-wedges-home-fries-french-fries-patatas-bravas-lyonnaise-potatoes-png-1.png": "/static/media/imgbin_potato-wedges-home-fries-french-fries-patatas-bravas-lyonnaise-potatoes-png-1.6ef6a925730dab5e1c3a.png",
+    "static/media/white-concrete-wall_53876-92803.webp": "/static/media/white-concrete-wall_53876-92803.76c7faaa33c48b7cb423.webp",
+    "static/media/bg10.jpg": "/static/media/bg10.5c90c8af7eb5d4126f8c.jpg",
+    "static/media/nutritionfacts.jpg": "/static/media/nutritionfacts.f4db56263ebbaad2406d.jpg",
+    "static/media/bonanza.jpg": "/static/media/bonanza.cf1e4e0e262e329615e4.jpg",
+    "static/media/cowboy.jpg": "/static/media/cowboy.8101aa1aa1241ae8386e.jpg",
+    "static/media/maio.jpg": "/static/media/maio.20cf56d190d9801cad7b.jpg",
+    "static/media/coca-cola.png": "/static/media/coca-cola.d5100cbf51e2aa8c4fef.png",
+    "static/media/memphis.jpg": "/static/media/memphis.c27f7372481631af1fc3.jpg",
+    "static/media/burger4.jpg": "/static/media/burger4.1049f2e22c8d8c5a205d.jpg",
+    "static/media/bg-white.jpg": "/static/media/bg-white.d970c56df3ea0eb15a97.jpg",
+    "static/media/original78.png": "/static/media/original78.dfd78b42acf323b71210.png",
+    "static/media/original-logo.png": "/static/media/original-logo.b7aa0e9260db01a114db.png",
+    "static/media/original-logo-white.png": "/static/media/original-logo-white.6b8e254dfa52dc06012f.png",
+    "static/media/h3-rev-bckgrnd-ing.jpg": "/static/media/h3-rev-bckgrnd-ing.3ef9c11caf8829eb7374.jpg",
+    "static/media/22.png": "/static/media/22.6e31a835a8dfd8b11c32.png",
+    "index.html": "/index.html",
+    "main.7a09483a.css.map": "/static/css/main.7a09483a.css.map",
+    "main.62553ce9.js.map": "/static/js/main.62553ce9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a09483a.css",
+    "static/js/main.62553ce9.js"
+  ]
+}
