@@ -34,8 +34,6 @@ const MenuItemOpened = (props) => {
 function MenuItem(props) {
   const [openedItem, setOpenedItem] = useState(null);
 
-  console.log(openedItem);
-
   const openItemHandler = (e) => {
     document.querySelector("body").style.overflowY = "hidden";
 

@@ -19,7 +19,6 @@ import whiteMenuBg from "../assets/bg10.jpg";
 
 function Home() {
   const headerIntersectionCtx = useContext(HeaderIntersectionContext);
-  console.log(headerIntersectionCtx.isIntersecting);
 
   return (
     <React.Fragment>

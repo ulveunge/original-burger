@@ -1,6 +1,6 @@
 {
-  "home": "http://ulveunge.github.io/original-burger",
   "name": "original-burger",
+  "homepage": "http://ulveunge.github.io/original-burger",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
