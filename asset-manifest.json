@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7a09483a.css",
-    "main.js": "/static/js/main.62553ce9.js",
+    "main.js": "/static/js/main.4241aadc.js",
     "static/media/origi.png": "/static/media/origi.d635ed01e20203791c18.png",
     "static/media/4-2-coca-cola-picture.png": "/static/media/4-2-coca-cola-picture.a98032d6908775a83228.png",
     "static/media/burger3.png": "/static/media/burger3.e58d9dc7dfffb93065a3.png",
@@ -23,10 +23,10 @@
     "static/media/22.png": "/static/media/22.6e31a835a8dfd8b11c32.png",
     "index.html": "/index.html",
     "main.7a09483a.css.map": "/static/css/main.7a09483a.css.map",
-    "main.62553ce9.js.map": "/static/js/main.62553ce9.js.map"
+    "main.4241aadc.js.map": "/static/js/main.4241aadc.js.map"
   },
   "entrypoints": [
     "static/css/main.7a09483a.css",
-    "static/js/main.62553ce9.js"
+    "static/js/main.4241aadc.js"
   ]
 }
