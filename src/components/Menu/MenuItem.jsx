@@ -64,7 +64,6 @@ function MenuItem(props) {
                 {typeof el[0] === "string" ? el[0] : "€" + el[0].toFixed(2)}
               </td>
               <td>
-                {" "}
                 {typeof el[1] === "string" ? el[1] : "€" + el[1].toFixed(2)}
               </td>
             </tr>
